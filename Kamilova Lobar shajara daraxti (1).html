@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uz"><head><meta charset="utf-8"><title>Kamilova Lobar — Shajara daraxti</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg1:#dff0f7;--bg2:#f6f4e8;--tx:#1f2a24;--mu:#5d6a62;--card:#fff;--trunk:#7a4f2b;--a:#2f8f5b;--b:#d9822b;--me:#1f5f3f;--gr:#9ccf8a;--ln:#cfd8cf}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#0f1c24;--bg2:#16201a;--tx:#eef3ee;--mu:#9fb0a5;--card:#1d261f;--trunk:#a8794a;--a:#3da56d;--b:#e39a45;--me:#2f8f5b;--gr:#2d4a2e;--ln:#34443a}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:linear-gradient(var(--bg1),var(--bg2));color:var(--tx);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+main{max-width:980px;margin:0 auto;padding:22px 12px 48px}
+h1{text-align:center;margin:0;font-size:26px}.sub{text-align:center;color:var(--mu);margin:4px 0 14px}
+.leg{display:flex;gap:16px;justify-content:center;font-size:14px;margin-bottom:10px}.leg i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+.box{overflow-x:auto;border-radius:16px}
+svg{display:block;min-width:900px;width:100%;height:auto}
+.n rect{stroke:rgba(0,0,0,.15)}.n text{fill:#fff;text-anchor:middle;font:11px system-ui,sans-serif}.n .b{font-weight:700;font-size:12.5px}.n .d{opacity:.9;font-size:10.5px}
+.n .r{font-size:9.5px;opacity:.85;letter-spacing:.03em}
+h2{text-align:center;font-size:19px;margin:28px 0 8px}
+details{background:var(--card);border:1px solid var(--ln);border-radius:12px;margin:8px 0;padding:8px 14px}
+summary{cursor:pointer;font-weight:600}ul{margin:8px 0 2px;padding-left:20px}
+.hint{text-align:center;color:var(--mu);font-size:13px;margin-top:6px}
+</style></head><body><main>
+<h1>🌳 Kamilova Lobar shajara daraxti</h1><p class="sub">Ildizdan — shoxlarga: avlodlar yuqoriga qarab o‘sadi</p>
+<div class="leg"><span><i style="background:var(--a)"></i>Ota tomoni</span><span><i style="background:var(--b)"></i>Ona tomoni</span></div>
+<div class="box"><svg id="t" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shajara daraxti"></svg></div>
+<p class="hint">Telefonda daraxtni yon tomonga surib ko‘rishingiz mumkin</p>
+<div id="rel"></div>
+<script>
+const K=(s,f,d,r,c,k=[])=>({s,f,d,r,c,k});
+const T=K("Kamilova","Lobar","18.09.2008","Men","m",[
+K("Qurbonboyev","Hamidjon","02.07.1985","Dadam","a",[
+ K("Qurbonboyev","Komiljon","28.10.1961","Bobo","a",[
+  K("Qurbonboyev","Rahim","20.10.1936","Katta bobo","a",[
+   K("Haytakov","Qurbonboy","1901","Ulug‘ bobo","a"),K("Jumatova","Enajon","1903","Ulug‘ buvi","a")]),
+  K("Matqurbonova","Gulora","08.03.1941","Katta buvi","a")]),
+ K("Yo‘ldosheva","Muborak","30.05.1963","Buvi","a",[
+  K("Yo‘ldoshev","Tursunboy","10.06.1933","Katta bobo","a"),K("Xo‘janiyozova","Zulayho","17.09.1939","Katta buvi","a")])]),
+K("Jumamuratova","Malohat","01.06.1985","Oyim","b",[
+ K("Jumamuratov","Qurbonboy","23.05.1961","Bobo","b"),K("Polvonova","Dilorom","02.10.1963","Buvi","b")])]);
+const SL=132,LH=118,BASE=600,PAD=40;let leaf=0;
+function lay(n,g){n.g=g;if(!n.k.length){n.x=PAD+SL*(leaf++)+SL/2}else{n.k.forEach(c=>lay(c,g+1));n.x=n.k.reduce((a,c)=>a+c.x,0)/n.k.length}n.y=BASE-g*LH}
+lay(T,0);
+const W=PAD*2+SL*leaf,H=BASE+170,col={a:"var(--a)",b:"var(--b)",m:"var(--me)"},sw=[12,8,5,3,2];
+let p="",q="";
+(function go(n){n.k.forEach(c=>{const m=(n.y+c.y)/2;p+=`<path d="M${n.x} ${n.y-26}C${n.x} ${m},${c.x} ${m},${c.x} ${c.y+26}" stroke="var(--trunk)" stroke-width="${sw[n.g]}" fill="none" stroke-linecap="round"/>`;go(c)});
+ q+=node(n,n.x,n.y,n.g==0)})(T);
+function node(n,x,y,big){const w=big?138:118,h=big?62:54;
+ return `<g class="n"><rect x="${x-w/2}" y="${y-h/2}" width="${w}" height="${h}" rx="18" fill="${col[n.c]}"/><text class="r" x="${x}" y="${y-h/2+13}">${n.r.toUpperCase()}</text><text x="${x}" y="${y-h/2+27}">${n.s}</text><text class="b" x="${x}" y="${y-h/2+41}">${n.f}</text><text class="d" x="${x}" y="${y-h/2+(big?55:50)}">${n.d}</text></g>`}
+const sib=[["Laylo","30.03.2010","Singlim"],["Muqaddas","21.08.2013","Singlim"],["Davlatbek","08.03.2018","Ukam"]];
+let s=`<ellipse cx="${W/2}" cy="${BASE+70}" rx="${W/2-30}" ry="46" fill="var(--gr)" opacity=".6"/>`;
+let sy=BASE+70;s+=`<path d="M${T.x} ${BASE+31}V${sy-20}" stroke="var(--trunk)" stroke-width="14" stroke-linecap="round"/>`;
+sib.forEach((b,i)=>{const x=T.x+(i-1)*140;s+=`<path d="M${T.x} ${sy-20}Q${T.x} ${sy-8},${x} ${sy+10}" stroke="var(--trunk)" stroke-width="4" fill="none"/>`+node({s:"Kamilova",f:b[0],d:b[1],r:b[2],c:"m"},x,sy+38,false).replace("var(--me)","#6d8f5a")});
+const svg=document.getElementById("t");svg.setAttribute("viewBox",`0 0 ${W} ${H}`);svg.innerHTML=s+p+q;
+const D=[["a","Ota tomondan amma va amakilar",["Rahimova Dilbar — 01.10.1986","Rahimov Hamza — 11.03.1989","Rahimova Dildor — 25.03.1990"]],
+["a","Komiljon bobomning birodarlari",["Qurbonboyev Bahodir","Qurbonboyev Bahrom","Qurbonboyev Ilhom","Qurbonboyev Ikrom","Qurbonboyeva Gulsara","Qurbonboyeva Feruza"]],
+["a","Rahim bobomning ukalari",["Qurbonboyev Karim — 1941","Qurbonboyev Orinboy — 1950","Qurbonboyev Ozod — 1952"]],
+["a","Muborak buvimning opa-singil va ukalari",["Malika — 1960","Muhabbat — 1966","Xosiyat — 1968","Yulduz — 1970","Abdulla — 1970","Xurshida — 1977","Nafisa — 1979"]],
+["b","Ona tomondan xola va tog‘alar",["Jumamuratova Gulzor — 08.03.1984","Jumamuratova Nasiba — 24.01.1987","Jumamuratov Ergash — 06.09.1988","Turaboyev Ergash — 06.05.1991"]],
+["b","Qurbonboy bobomning opa-singillari",["Jumamuratova Oltinoy — 1970","Jumamuratova Kumushoy — 1972"]],
+["b","Dilorom buvimning opa-singil va ukalari",["Polvonova Rayhon","Polvonova Yulduz","Polvonova Qunduz","Polvonova Dilbar","Polvonova Amina","Polvonova Guljon","Polvonova Momajon","Polvonov Anvar","Polvonov Davron"]]];
+document.getElementById("rel").innerHTML="<h2>Qarindoshlar</h2>"+D.map(d=>`<details><summary style="color:var(--${d[0]})">${d[1]}</summary><ul>${d[2].map(x=>`<li>${x}</li>`).join("")}</ul></details>`).join("");
+</script>
+</main></body></html>
